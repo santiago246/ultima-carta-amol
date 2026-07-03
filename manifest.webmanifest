@@ -1,0 +1,12 @@
+{
+  "name": "La última forma de amarte",
+  "short_name": "Yoangelis",
+  "description": "Una experiencia de despedida para Yoangelis.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff6fa",
+  "theme_color": "#eaa0bd",
+  "icons": [
+    { "src": "assets/icons/heart.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

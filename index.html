@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#eaa0bd" />
+    <meta name="description" content="La última forma de amarte: una experiencia de despedida para Yoangelis." />
+    <meta property="og:title" content="La última forma de amarte" />
+    <meta property="og:description" content="Una despedida para recordar lo que fuimos, lo que intenté y lo que ahora debo soltar." />
+    <meta property="og:type" content="website" />
+    <title>La última forma de amarte</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icons/heart.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="scrollProgress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="aurora aurora-a" aria-hidden="true"></div>
+    <div class="aurora aurora-b" aria-hidden="true"></div>
+    <div id="petals" class="petals" aria-hidden="true"></div>
+
+    <audio id="bgMusic" src="assets/music/cancion.mp3" loop preload="auto" autoplay></audio>
+
+    <aside class="control-dock" aria-label="Controles de la experiencia">
+      <button id="musicToggle" class="icon-btn" type="button" aria-label="Activar música">♫</button>
+      <button id="cinemaToggle" class="icon-btn" type="button" aria-label="Activar modo cine">◐</button>
+      <button id="menuToggle" class="icon-btn" type="button" aria-label="Abrir capítulos">☰</button>
+      <div class="dock-copy">
+        <strong>Versión final</strong>
+        <span id="audioStatus">Canción preparada</span>
+      </div>
+    </aside>
+
+    <nav id="chapterMenu" class="chapter-menu" aria-label="Índice de capítulos">
+      <header>
+        <span>Recorrido</span>
+        <button id="menuClose" type="button">Cerrar</button>
+      </header>
+      <button data-jump="inicio">Inicio</button>
+      <button data-jump="acto-1">Acto I · Antes de amarte</button>
+      <button data-jump="acto-2">Acto II · El amor que cuida</button>
+      <button data-jump="acto-3">Acto III · La oscuridad</button>
+      <button data-jump="acto-4">Acto IV · La vida que empezaba</button>
+      <button data-jump="acto-5">Acto V · La puerta que se abrió</button>
+      <button data-jump="carta-final">Carta final</button>
+      <button data-jump="cierre">Cerrar esta historia</button>
+    </nav>
+
+    <main>
+      <section id="inicio" class="section hero full-screen scene-hero">
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <article class="hero-card reveal">
+          <p class="eyebrow">Para Yoangelis</p>
+          <h1>La última forma de amarte</h1>
+          <p class="subtitle">Una despedida para recordar lo que fuimos, lo que intenté y lo que ahora debo soltar.</p>
+          <div class="divider"></div>
+          <p>Esta no es una página para reclamarte.</p>
+          <p>Es una forma de dejar escrito lo que quizás nunca pude decirte bien: lo que vi en ti, lo que amé de ti, lo que intenté por ti, lo que soñé contigo y lo que hoy, con todo el dolor de mi corazón, tengo que soltar.</p>
+          <div class="hero-actions">
+            <button class="primary" data-jump="acto-1">Entrar, amol</button>
+            <button class="secondary" id="startMusic" type="button">Activar música si no empieza</button>
+          </div>
+          <small>Usa audífonos. La canción intentará reproducirse al abrir. Si el celular la bloquea, toca “Activar música”.</small>
+        </article>
+      </section>
+
+      <section id="acto-1" class="section act act-rose">
+        <div class="act-inner reveal">
+          <p class="eyebrow">Acto I</p>
+          <h2>Antes de amarte</h2>
+          <p>Primero no fue amor. Fue verte, escucharte, admirarte y descubrir que había algo en ti que se quedaba conmigo.</p>
+        </div>
+      </section>
+
+      <section class="section chapter board-scene">
+        <div class="chapter-number">01</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Antes de amarte, te admiré</p>
+          <h2>Cuando todavía no sabía que iba a enamorarme de ti</h2>
+          <p>Todo empezó con miradas, coqueteos y sonrisas que pasaban casi sin decir nada. Yo todavía no sabía que me iba a enamorar de ti. Solo sabía que había algo en ti que me llamaba la atención.</p>
+          <div class="interactive-equation" tabindex="0" role="button" aria-label="Tocar la pizarra">
+            <span>3x + 5 = 20</span>
+            <small>Toca la pizarra</small>
+          </div>
+          <p class="equation-note">Lo que está sumando pasa restando. Lo que está multiplicando pasa dividiendo.</p>
+          <p>Y mientras yo intentaba enseñarte matemáticas, tú me enseñabas algo sin darte cuenta: que cuando <strong>Yoangelis</strong> se propone algo, lo logra.</p>
+          <p>No me enamoró que supieras todo. Me enamoró verte intentar. Me enamoró ver que, aunque algo te costara, tú podías aprenderlo si de verdad te lo proponías.</p>
+        </article>
+      </section>
+
+      <section class="section chapter memory-scene">
+        <div class="chapter-number">02</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Una galleta que valía un millón</p>
+          <h2>Los primeros detalles</h2>
+          <p>Cuando nos estábamos conociendo en el salón, me dabas detalles pequeños. Una galleta. Un chupetín. Algo sencillo.</p>
+          <p>Quizá para cualquiera era poco. Para mí no. Para mí una galleta de un sol podía valer como un millón, porque venía de ti. Porque me dabas algo sin tener mucho. Porque en ese detalle había una ternura que yo sí veía.</p>
+          <div class="symbol-row" aria-hidden="true"><span>🍪</span><span>🍭</span><span>💌</span><span>🎁</span></div>
+          <p>Después no fueron solo galletas. También vinieron detalles hechos por ti, regalos, sorpresas, cosas que armabas con tus manos y con tu corazón.</p>
+          <p>Y yo también quise darte detalles. Al inicio con regalos y sorpresas. Después, cuando la vida se puso más difícil, mi forma de demostrar amor también fue cambiando: luchando por ti, esforzándome por ti, acompañándote y quedándome cuando era más difícil quedarse.</p>
+          <div class="photo-strip" data-album="detalles"></div>
+        </article>
+      </section>
+
+      <section class="section chapter soft-scene">
+        <div class="chapter-number">03</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">La mujer que empecé a ver</p>
+          <h2>Tu corazón también me enamoró</h2>
+          <p>Fui conociendo tu bondad, tu nobleza, tu ternura, tu forma de luchar, tu corazón sensible y tu manera de seguir intentando aunque la vida te hubiera golpeado muchas veces.</p>
+          <p>Pero lo que más me marcó fue ver que creías en Dios. Para mí eso era importante. Era mirar algo en ti que iba más allá de lo bonito. Algo más profundo. Algo que me hacía pensar: ella tiene algo especial.</p>
+          <p>Poco a poco me fuiste gustando por todo eso. No solo por cómo te veías. Me fuiste gustando por lo que yo veía en tu corazón.</p>
+          <div class="photo-grid" data-album="inicio"></div>
+        </article>
+      </section>
+
+      <section id="acto-2" class="section act act-warm">
+        <div class="act-inner reveal">
+          <p class="eyebrow">Acto II</p>
+          <h2>El amor que cuida</h2>
+          <p>Hay amores que se demuestran con palabras. Otros se demuestran cocinando, cuidando, acompañando, preguntando y quedándose.</p>
+        </div>
+      </section>
+
+      <section class="section chapter father-scene">
+        <div class="chapter-number">04</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Hito</p>
+          <h2>El amor que te protegió primero</h2>
+          <p>Antes de mí, hubo un amor que te enseñó lo que era sentirse protegida: tu papá Alcides.</p>
+          <p>Él te llevó a la iglesia. Te llevó de viaje. Te cuidó cuando tenías miedo. Te abrazó cuando tenías pesadillas. Te defendió cuando alguien quería hacerte daño. Te cocinó cuando tenías hambre, incluso a medianoche.</p>
+          <div class="memory-cards">
+            <button type="button" data-memory="Tu papá te llevaba a Dios desde niña. Esa fe también fue parte de lo que yo admiré de ti.">Hito, vamos a la iglesia.</button>
+            <button type="button" data-memory="Una mesa, una comida, un cuidado sencillo. A veces el amor se sienta al lado y pregunta si ya comiste.">Hito, vamos a comer.</button>
+            <button type="button" data-memory="Cuando tenías pesadillas, sus brazos eran refugio. Una niña necesitaba sentirse segura, y él estuvo ahí.">Hito, ven, acuéstate aquí.</button>
+            <button type="button" data-memory="Si te daba hambre a medianoche, él se levantaba. Cocinarte también era una forma de decirte: te amo.">Hito, te preparo algo.</button>
+          </div>
+          <div id="memoryOutput" class="memory-output">Toca un recuerdo.</div>
+          <p>Y no lo hacía por obligación. Lo hacía porque te amaba. Su forma de amarte también estaba en esas cosas: levantarse, cocinarte, cuidarte, protegerte, enseñarte a creer en Dios y hacerte sentir que mientras él estuviera cerca, no estabas sola.</p>
+          <p>Yo sé que ese amor fue único. Y jamás quise ocupar su lugar.</p>
+        </article>
+      </section>
+
+      <section class="section chapter couple-care-scene">
+        <div class="chapter-number">05</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Yo no quería ser tu papá</p>
+          <h2>Quería ser tu pareja</h2>
+          <p>Yo nunca quise ser tu papá. Yo quería ser tu pareja.</p>
+          <p>Pero para mí una pareja también cuida. Una pareja también pregunta si comiste. También se preocupa por si llegaste bien. También cocina. También acompaña. También protege. También se queda cuando el otro se está cayendo.</p>
+          <p>Quizá a veces no entendiste mi forma de amar. Quizá pensaste que era demasiado. Pero mi intención nunca fue ocupar un lugar que no me correspondía.</p>
+          <p>Mi intención era darte un amor puro, sincero y verdadero. Un amor que cuidara. Un amor que no solo dijera “te quiero”, sino que lo demostrara.</p>
+          <p>Tu papá te demostró amor cocinándote, cuidándote, defendiéndote y estando para ti. Yo no podía amar exactamente como él. Nadie podría. Pero sí quise darte una forma de amor que también se pareciera al cuidado, a la ternura y a la presencia.</p>
+        </article>
+      </section>
+
+      <section class="section chapter blessing-scene">
+        <div class="chapter-number">06</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">La bendición que yo sentí</p>
+          <h2>Tu papá y la forma en que yo quería llegar a tu vida</h2>
+          <p>Yo no conocí tanto a tu papá como me hubiera gustado. Pero recuerdo su sonrisa, su forma de saludarme, su manera de hablarme cuando coincidíamos en llamada.</p>
+          <p>Y aunque quizá nunca lo dijo con todas esas palabras, yo sentí algo muy profundo: sentí que él me permitió estar cerca de ti.</p>
+          <p>Sentí que, de alguna forma, me daba su bendición para estar con su hija. Y eso para mí importaba mucho.</p>
+          <p>Porque tú misma me dijiste que tu papá bendeciría nuestra relación. Yo me aferré mucho a eso, no por orgullo, sino porque quería que las personas que realmente te amaron supieran que yo no llegaba a dañarte. Yo llegaba con respeto. Llegaba con amor. Llegaba para cuidarte.</p>
+        </article>
+      </section>
+
+      <section class="section chapter origin-scene">
+        <div class="chapter-number">07</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Yo también venía de ausencias</p>
+          <h2>Aprendí que amar también es dar</h2>
+          <p>Yo también sé lo que es crecer con ausencias. Mi papá no estuvo. Pero Dios puso en mi vida a mi abuelo Salomón, al padre Alain y a mi mamá.</p>
+          <p>Ellos me enseñaron que la verdadera riqueza no es cuánto tienes, sino cuánto eres capaz de dar.</p>
+          <p>Por eso, cuando te vi triste, lejos de tu tierra, cargando dolores que no sabías cómo soltar, algo en mí quiso ayudarte.</p>
+          <p>No porque fueras débil. Sino porque yo reconocí en ti el dolor de alguien que necesitaba refugio.</p>
+          <p>Y en el proceso de querer ayudarte, sin darme cuenta, empecé a amarte.</p>
+        </article>
+      </section>
+
+      <section id="acto-3" class="section act act-night">
+        <div class="act-inner reveal">
+          <p class="eyebrow">Acto III</p>
+          <h2>La oscuridad y la presencia</h2>
+          <p>Hubo noches donde amar no fue bonito. Fue buscar, esperar, llorar, acompañar y seguir creyendo.</p>
+        </div>
+      </section>
+
+      <section class="section chapter dark-scene">
+        <div class="chapter-number">08</div>
+        <article class="chapter-card reveal dark-card">
+          <p class="eyebrow">Cuando empezaste a apagarte</p>
+          <h2>El dolor que te fue empujando a huir</h2>
+          <p>Hubo una etapa en la que te vi apagarte. No fue de un día para otro. Fue poco a poco. Como si todo lo que habías vivido, todo lo que habías perdido, todo lo que extrañabas y todo lo que te dolía empezara a pesar demasiado.</p>
+          <p>Venías de una historia difícil. De cambios, pérdidas, heridas, gritos, alcohol, peleas, abandono emocional y formas rotas de querer.</p>
+          <p>Y cuando una persona vive mucho tiempo rodeada de caos, a veces empieza a normalizarlo. A veces el alma se acostumbra a sobrevivir donde debería sentirse amada.</p>
+          <p>Tal vez por eso empezaste a huir. Del dolor. De la tristeza. De la soledad. De todo lo que no sabías cómo decir.</p>
+          <p>Y yo, que te amaba, quise estar ahí.</p>
+        </article>
+      </section>
+
+      <section class="section chapter midnight-scene">
+        <div class="chapter-number">09</div>
+        <article class="chapter-card reveal dark-card">
+          <p class="eyebrow">Las veces que dejé todo por ti</p>
+          <h2>Cuando me necesitabas, yo iba</h2>
+          <p>Muchas veces, cuando estabas mal, yo dejaba todo.</p>
+          <p>No importaba si era tarde. No importaba si tenía sueño. No importaba si tenía cosas que hacer. No importaba si mi mamá se molestaba porque salía a esa hora.</p>
+          <p>Si tú estabas llorando, yo quería estar ahí. Si estabas rota, yo quería acompañarte. Si necesitabas a alguien, yo hacía lo que fuera para llegar.</p>
+          <p>Muchas veces fue a medianoche. Muchas veces fue cuando yo también estaba cansado. Muchas veces fue cuando no sabía cómo iba a resolver mis propias cosas. Pero iba.</p>
+          <p>Porque para mí amar no era solo decirte cosas bonitas. Amar también era aparecer cuando estabas destruida. Amar era sentarme a llorar contigo. Amar era abrazarte en tu peor momento. Amar era dejar mi mundo en pausa para intentar sostener el tuyo.</p>
+        </article>
+      </section>
+
+      <section class="section chapter search-scene">
+        <div class="chapter-number">10</div>
+        <article class="chapter-card reveal dark-card">
+          <p class="eyebrow">Las noches en que te busqué</p>
+          <h2>Yo conocí tus partes más difíciles</h2>
+          <p>Te busqué cuando estabas mal. Te recogí de lugares donde nunca debiste estar. Pasé noches contigo en la calle. Si tenía algo de dinero, buscaba un lugar donde pudieras descansar.</p>
+          <div class="night-map" aria-label="Recuerdos de madrugada">
+            <button data-pulse="Te busqué incluso cuando no sabía dónde estabas.">Una madrugada</button>
+            <button data-pulse="Juana y yo no dormimos porque nos importabas.">Con Juana</button>
+            <button data-pulse="No te dejé sola en los lugares donde el dolor podía ganarte.">La calle</button>
+            <button data-pulse="Seguí creyendo que podías sanar.">La fe</button>
+          </div>
+          <div id="pulseOutput" class="memory-output night-output">Toca un punto del mapa.</div>
+          <p>Hubo noches que me rompieron. Noches donde me gritaste, me insultaste, me golpeaste, hiciste escenas en la calle y aun así yo seguí ahí.</p>
+          <p>No porque no me doliera. Me dolía demasiado. Pero seguía creyendo que podías sanar.</p>
+          <p>No todos habrían soportado eso. No todos habrían salido a buscarte en la madrugada. No todos habrían visto tus heridas antes que tus errores.</p>
+        </article>
+      </section>
+
+      <section class="section chapter juana-scene">
+        <div class="chapter-number">11</div>
+        <article class="chapter-card reveal dark-card">
+          <p class="eyebrow">Juana también se quedó</p>
+          <h2>Ella también cargó noches difíciles</h2>
+          <p>Juana también se quedó.</p>
+          <p>Juana también te buscó. Juana también sufrió noches sin dormir. Juana también intentó cuidarte cuando otros ya estaban cansados.</p>
+          <p>Quizá no siempre supiste cómo ser hija con ella. Tú misma lo dijiste. Pero ella sí intentó ser refugio para ti.</p>
+          <p>Y en muchas de esas noches, no estuvimos solo tú y yo. También estuvo Juana, cargando contigo un dolor que pocas personas habrían soportado.</p>
+        </article>
+      </section>
+
+      <section class="section chapter church-scene">
+        <div class="chapter-number">12</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Dios, las señales y la esperanza</p>
+          <h2>Yo le rogaba a Dios por nosotros</h2>
+          <p>Cuando me alejé y luego volvimos a hablar, decidí llevarte a la iglesia.</p>
+          <p>No porque yo pudiera salvarte solo. Sino porque creía que Dios podía llegar a lugares de tu corazón donde nadie más podía entrar.</p>
+          <p>Yo le rogaba mucho a Dios por ti. Le decía: por favor, dale todo lo necesario para que salga adelante. Ayúdala a recuperarse. Ayúdanos a que esta relación funcione.</p>
+          <p>Y si no eras para mí, también le pedía que me diera una señal.</p>
+          <p>Pero cada vez que íbamos a la iglesia, yo sentía que las señales eran positivas. El pastor hablaba de luchar por la relación, de no rendirse, de salir adelante, de cuidar el amor.</p>
+          <p>Era extraño. Era demasiada coincidencia. Yo le pedía señales a Dios y sentía que esas señales llegaban en los sermones.</p>
+          <p>Por eso mi corazón creyó tanto. Porque yo sentí que Dios estaba bendiciendo nuestra relación y dándonos una oportunidad para recuperar lo nuestro.</p>
+          <div class="photo-strip" data-album="iglesia"></div>
+        </article>
+      </section>
+
+      <section id="acto-4" class="section act act-dawn">
+        <div class="act-inner reveal">
+          <p class="eyebrow">Acto IV</p>
+          <h2>La vida que parecía empezar</h2>
+          <p>Después de tanto dolor, hubo una etapa donde todo empezó a verse posible.</p>
+        </div>
+      </section>
+
+      <section class="section chapter bloom-scene">
+        <div class="chapter-number">13</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Cuando volviste a ti</p>
+          <h2>Yo sí vi tu esfuerzo</h2>
+          <p>Y entonces empezaste a cambiar.</p>
+          <p>Te hartaste del alcohol. Te hartaste de las malas amistades. Te alejaste de lo que te hacía daño. Empezaste a escucharnos. Empezaste a dejarte ayudar. Empezaste a enfocarte.</p>
+          <p>Volviste a demostrarme lo primero que vi en ti: que cuando Yoangelis se propone algo, lo logra.</p>
+          <p>Lo que a muchas personas les cuesta años, tú empezaste a lograrlo en meses.</p>
+          <p>Y yo estuve ahí. Creyendo contigo. Empujando contigo. Orando contigo. Acompañándote en ese cambio.</p>
+          <p>Yo no solo vi tu caída. También vi tu esfuerzo por levantarte. Y me sentí orgulloso de ti.</p>
+        </article>
+      </section>
+
+      <section class="section chapter rose-life-scene">
+        <div class="chapter-number">14</div>
+        <article class="chapter-card reveal wide-card">
+          <p class="eyebrow">Todo empezó a ser color de rosa</p>
+          <h2>Cuando lo simple contigo era vida</h2>
+          <p>Todo empezó a sentirse bonito otra vez.</p>
+          <p>Nos reíamos. Bailábamos. Viajábamos. Mirábamos atardeceres. Cantábamos en la moto. Me abrazabas mientras manejaba. Me acompañabas a repartir delivery. A veces cualquier plan simple se volvía especial contigo.</p>
+          <p>Podíamos comprar makis, irnos a algún lugar, improvisar una cita, mirar el cielo, escuchar música y sentir que no necesitábamos más.</p>
+          <p>Yo sentía que nos estábamos recuperando. Que por fin estábamos viviendo algo sano. Algo nuestro. Algo que podía crecer.</p>
+          <div class="gallery-heading">
+            <span>Recuerdos felices</span>
+            <span class="music-note">La canción de fondo acompaña esta parte.</span>
+          </div>
+          <div class="photo-grid photo-grid-large" data-album="color-de-rosa"></div>
+        </article>
+      </section>
+
+      <section class="section chapter gifts-scene">
+        <div class="chapter-number">15</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Tus detalles, mis detalles</p>
+          <h2>Y mi nueva forma de amarte</h2>
+          <p>Tú también fuiste detallista conmigo.</p>
+          <p>Me diste regalos, sorpresas, cosas hechas por ti, detalles que armabas con cariño. Y yo también quise hacer eso contigo.</p>
+          <p>Al inicio mis detalles podían ser regalos, sorpresas, cosas bonitas. Después también fueron chocolates cuando te bajaba la regla, algo pequeño cualquier día, una comida, una ayuda, una aplicación web hecha para ti, una forma distinta de decirte que pensaba en ti.</p>
+          <p>Pero con el tiempo, mi detalle más grande fue otro: luchar por ti.</p>
+          <p>Mi forma más fuerte de demostrarte amor fue esforzarme para que salieras adelante, para que cumplieras tus metas, para que no te perdieras, para que recordaras la mujer que podías ser.</p>
+          <p>Porque amar no siempre se ve como flores. A veces amar se ve como cansancio, trabajo, preocupación, deuda, madrugada, oración y esfuerzo.</p>
+          <div class="photo-strip" data-album="detalles"></div>
+        </article>
+      </section>
+
+      <section class="section chapter kitchen-scene">
+        <div class="chapter-number">16</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">El primer plato que cociné con amor</p>
+          <h2>Una forma de hogar</h2>
+          <p>Tu papá te cocinaba porque te amaba.</p>
+          <p>Te cocinaba rico. Te cocinaba incluso cuando te daba hambre a medianoche. Te cuidaba también desde la comida, desde ese acto simple y profundo de levantarse para prepararte algo.</p>
+          <p>Yo no sé si cociné rico como él. Seguramente nunca podría igualar su sazón. Pero lo intenté.</p>
+          <p>Y cuando te cociné, sentí algo que no había sentido antes. Yo nunca había cocinado así para alguien. No con esa intención. No con ese sentimiento.</p>
+          <p>Cocinarte fue mi forma de decirte que te amaba. Fue mi forma de intentar demostrarte un amor puro y verdadero, como tu papá también te lo demostró desde el cuidado.</p>
+          <p>Y cuando estuve contigo y con Juana, compartiendo ese momento, sentí familia. Sentí que por un instante estaba viviendo algo que siempre había querido.</p>
+          <p>Soñaba con llevarte el desayuno a la cama. Soñaba con despertarte con algo preparado por mí. Con engreírte. Con cocinarte todos los días si vivíamos juntos. Con prepararte lo que se te antojara y decirte: amol, ya está listo.</p>
+          <p>Quizá para otros cocinar es solo cocinar. Para mí, contigo, fue una forma de hogar.</p>
+          <div class="photo-grid" data-album="cocina"></div>
+        </article>
+      </section>
+
+      <section class="section chapter dreams-scene">
+        <div class="chapter-number">17</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Cuando mis sueños cambiaron</p>
+          <h2>Tu felicidad empezó a importarme como si fuera mía</h2>
+          <p>Cuando me enamoré de ti, mis sueños cambiaron.</p>
+          <p>Ya no se trataba solo de lo que yo quería lograr. Empecé a soñar con verte cumplir tus sueños.</p>
+          <p>Si tú eras feliz, yo también sentía que podía ser feliz.</p>
+          <p>Quería verte independiente. Quería verte trabajando. Quería verte con tu salón. Quería verte orgullosa de ti misma.</p>
+          <p>Muchas veces puse mis proyectos en pausa porque quería ayudarte primero a levantar los tuyos.</p>
+          <p>Pensé que después, cuando tú estuvieras mejor, también estarías conmigo para levantar los míos.</p>
+          <p>Eso también era amor: que tus sueños empezaran a importarme como si fueran míos.</p>
+          <div class="photo-strip" data-album="suenos"></div>
+        </article>
+      </section>
+
+      <section class="section chapter future-scene">
+        <div class="chapter-number">18</div>
+        <article class="chapter-card reveal wide-card">
+          <p class="eyebrow">Los sueños que ya estaba construyendo contigo</p>
+          <h2>Yo no solo te imaginaba en mis días bonitos</h2>
+          <p>Te imaginaba en mi futuro.</p>
+          <div class="dream-board">
+            <div><strong>Familia</strong><span>Dos hijos: un niño y una niña.</span></div>
+            <div><strong>Hogar</strong><span>Un departamento, desayunos, cocina y vida juntos.</span></div>
+            <div><strong>Viajes</strong><span>Cusco, atardeceres, otros países, mundo compartido.</span></div>
+            <div><strong>Tu salón</strong><span>Tú haciendo uñas hermosas; yo con marketing, publicidad y clientes.</span></div>
+            <div><strong>Carro</strong><span>Un paso más para movernos, trabajar y construir.</span></div>
+            <div><strong>Metas</strong><span>Primero tus sueños; después, los míos contigo al lado.</span></div>
+          </div>
+          <p>No eran solo palabras. Yo ya estaba construyendo mentalmente una vida contigo.</p>
+          <div class="photo-grid" data-album="independencia"></div>
+        </article>
+      </section>
+
+      <section id="acto-5" class="section act act-crack">
+        <div class="act-inner reveal">
+          <p class="eyebrow">Acto V</p>
+          <h2>La puerta que se abrió</h2>
+          <p>Lo nuevo puede sentirse intenso. Pero no todo lo intenso es amor, y no todo lo fácil tiene profundidad.</p>
+        </div>
+      </section>
+
+      <section class="section chapter novelty-scene">
+        <div class="chapter-number">19</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">La trampa de lo nuevo</p>
+          <h2>No todo lo que se siente intenso es verdadero</h2>
+          <p>A veces alguien nuevo llega y parece traer una emoción distinta.</p>
+          <p>Te mira. Te escucha. Te coquetea. Te hace sentir bonita. Te hace sentir deseada. Te hace sentir validada.</p>
+          <p>Y sí, entiendo que eso puede sentirse bien.</p>
+          <p>Después de la rutina, después del cansancio, después de los problemas, después de conversaciones difíciles, alguien nuevo puede sentirse como aire fresco.</p>
+          <p>Pero lo nuevo no siempre es amor. A veces es dopamina. A veces es validación. A veces es escape. A veces es una emoción fácil entrando justo cuando el amor verdadero estaba pidiendo madurez.</p>
+          <p>Y lo nuestro no necesitaba una puerta abierta a alguien más. Lo nuestro necesitaba verdad, conversación y voluntad de los dos.</p>
+        </article>
+      </section>
+
+      <section class="section chapter comparison-scene">
+        <div class="chapter-number">20</div>
+        <article class="chapter-card reveal wide-card">
+          <p class="eyebrow">Lo injusto de comparar</p>
+          <h2>No estabas comparando dos historias iguales</h2>
+          <div class="compare-panel">
+            <div>
+              <strong>Lo nuevo</strong>
+              <span>Coqueteo, atención, novedad, validación y deseo.</span>
+            </div>
+            <div>
+              <strong>Lo construido</strong>
+              <span>Rutina, cansancio, decisiones, deudas, planes, heridas, perdón, trabajo y esfuerzo.</span>
+            </div>
+          </div>
+          <p>Fue injusto compararme con alguien nuevo. Porque no estabas comparando dos historias iguales.</p>
+          <p>Si ibas a comparar, debías comparar ese inicio con el inicio que tuviste conmigo: nuestras miradas, nuestros nervios, nuestros primeros besos, nuestras risas, esa emoción de conocernos.</p>
+          <p>Porque al inicio todo puede sentirse bonito con cualquiera.</p>
+          <p>Lo difícil no es fijarse en ti cuando estás trabajando, más segura, más enfocada, más bonita, más estable y con metas claras.</p>
+          <p>Lo difícil fue amarte cuando estabas perdida. Cuando tomabas. Cuando mentías. Cuando desaparecías. Cuando había que buscarte en la madrugada. Cuando gritabas. Cuando me golpeabas. Cuando ni tú misma sabías cómo volver a ti.</p>
+          <p>Yo conocí esa parte de ti. Y aun así me quedé.</p>
+        </article>
+      </section>
+
+      <section class="section chapter doorway-scene">
+        <div class="chapter-number">21</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Mientras yo construía</p>
+          <h2>Tú abrías una puerta</h2>
+          <p>Mientras yo estaba trabajando para ayudarte a independizarte, tú empezaste a abrirle espacio a alguien más.</p>
+          <p>Mientras yo pensaba en cómo apoyarte económicamente, alguien más empezó a darte atención.</p>
+          <p>Mientras yo soñaba con nuestro departamento, tus metas, tu salón, nuestros viajes y nuestra familia, tú empezaste a mirar hacia otro lado.</p>
+          <p>Y eso dolió de una forma que no sé explicar.</p>
+          <p>Porque yo estaba intentando construir futuro contigo, mientras tú empezabas a permitir que alguien entrara en nuestro presente.</p>
+        </article>
+      </section>
+
+      <section class="section chapter final-try-scene">
+        <div class="chapter-number">22</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Yo intenté hasta el último</p>
+          <h2>Quise encender lo que se estaba apagando</h2>
+          <p>Cuando empecé a sentirte rara, yo no busqué a otra persona.</p>
+          <p>No me fui a llenar ese vacío con alguien nuevo. No hice lo que muchos habrían hecho.</p>
+          <p>Yo te pregunté qué pasaba. Te pregunté si estabas bien. Te pregunté qué podíamos hacer para mejorar. Te dije que reviviéramos la llama. Te pedí que lucháramos por lo nuestro.</p>
+          <p>Eso también es amor: notar que algo se está apagando y querer encenderlo otra vez.</p>
+          <p>Si tú sentías que algo faltaba, debiste decírmelo. Debiste decirme: amol, nos estamos apagando. Debiste buscar conmigo lo que empezaste a permitir con alguien más.</p>
+          <p>Yo intenté hasta el último. Pedí una acción. Una señal. Algo que me demostrara que todavía querías luchar. Pero muchas veces sentí que, cuando yo extendía la mano, tú mirabas hacia otro lado.</p>
+        </article>
+      </section>
+
+      <section class="section chapter achievements-scene">
+        <div class="chapter-number">23</div>
+        <article class="chapter-card reveal wide-card">
+          <p class="eyebrow">Lo que logramos en tan poco tiempo</p>
+          <h2>Por eso yo creía que podíamos lograrlo todo</h2>
+          <p>En pocos meses logramos cosas que antes parecían imposibles.</p>
+          <div class="milestones">
+            <span>Saliste del alcohol</span>
+            <span>Te sentiste mejor</span>
+            <span>Estuvimos cuatro meses bien</span>
+            <span>Te enfocaste</span>
+            <span>Trabajaste</span>
+            <span>Te independizaste</span>
+            <span>Compraste tus cosas</span>
+            <span>Empezaste un nuevo espacio</span>
+          </div>
+          <p>Lavadora. Cocina. Refrigeradora. Cama. Colchón. Tu propio lugar. Tu nueva etapa.</p>
+          <p>No fue casualidad. Fue esfuerzo.</p>
+          <p>Tú poniendo de tu parte. Yo detrás de ti, apoyándote, empujando, creyendo, pausando mis propios sueños para ayudarte primero con los tuyos.</p>
+          <p>Y eso me hacía creer que podíamos lograrlo todo.</p>
+        </article>
+      </section>
+
+      <section class="section chapter limit-scene">
+        <div class="chapter-number">24</div>
+        <article class="chapter-card reveal">
+          <p class="eyebrow">Lo que ya no puedo seguir haciendo</p>
+          <h2>Esta vez también tengo que elegirme</h2>
+          <p>Yo puedo amar mucho, pero no puedo seguir perdiéndome para que alguien me valore recién cuando ya me estoy yendo.</p>
+          <p>No puedo seguir luchando por una relación donde solo uno intenta salvarla.</p>
+          <p>No puedo seguir compitiendo con la emoción de alguien nuevo cuando yo fui quien estuvo en tus noches más oscuras.</p>
+          <p>No puedo seguir explicando mi valor a alguien que lo tuvo enfrente tantas veces.</p>
+          <p>Esta vez no me voy porque dejé de amarte. Me voy porque también tengo que elegirme.</p>
+        </article>
+      </section>
+
+      <section id="carta-final" class="section letter-section">
+        <article class="letter-wrapper reveal">
+          <p class="eyebrow">Carta final</p>
+          <h2>Esta es la última vez que intento explicarte mi corazón</h2>
+          <p class="letter-intro">Lee esta carta despacio. No está escrita para odiarte. Está escrita para cerrar con verdad.</p>
+          <button id="openLetter" class="primary" type="button">Leer carta final</button>
+          <div id="letterBody" class="letter-body" hidden>
+            <p><strong>Yoangelis:</strong></p>
+            <p>No sé en qué momento exacto empezó a romperse todo.</p>
+            <p>Tal vez no fue un solo día. Tal vez fue poco a poco. Tal vez fue en cada silencio, en cada mentira, en cada vez que yo preguntaba qué pasaba y tú me decías que nada. Tal vez fue cuando yo seguía intentando encender algo que tú ya estabas dejando apagar.</p>
+            <p>Pero antes de despedirme, necesito que entiendas algo.</p>
+            <p>Yo sí te amé.</p>
+            <p>No te amé solo cuando estabas bonita, tranquila, arreglada, sonriendo o fácil de amar. Te amé también cuando estabas rota. Cuando estabas perdida. Cuando el alcohol te ganaba. Cuando desaparecías. Cuando había que buscarte en la madrugada. Cuando Juana y yo no dormíamos por ti. Cuando me gritabas. Cuando me insultabas. Cuando me golpeabas. Cuando me fallabas. Cuando ni tú misma sabías cómo volver a ti.</p>
+            <p>Yo estuve ahí.</p>
+            <p>No perfecto. No siempre fuerte. No siempre sabiendo qué hacer. Pero estuve.</p>
+            <ul>
+              <li>Te busqué.</li><li>Te cuidé.</li><li>Oré por ti.</li><li>Te acompañé.</li><li>Te llevé comida.</li><li>Te llevé chocolates cuando te bajaba la regla.</li><li>Te preparé sorpresas cuando podía.</li><li>Te hice detalles de la forma en que sabía hacerlo.</li><li>Me preocupé por si habías comido.</li><li>Me preocupé por tu salud.</li><li>Me preocupé por tu vida.</li><li>Me preocupé por tu alma.</li>
+            </ul>
+            <p>Y muchas veces dejé todo por ti.</p>
+            <p>No importaba si era tarde. No importaba si tenía sueño. No importaba si mi mamá se molestaba porque salía de madrugada. Si tú estabas mal, yo hacía lo que fuera para estar ahí.</p>
+            <p>Muchas veces fui a llorar contigo. A abrazarte. A sostenerte. A intentar hacerte sentir mejor cuando el mundo se te caía encima.</p>
+            <p>Esa fue una de mis formas más reales de amarte.</p>
+            <p>Cuando me alejé, no fue porque dejé de amarte. Fue porque también me estaba hundiendo. Porque a veces amar también es entender que si uno se queda en medio del incendio sin poder apagarlo, termina quemándose también.</p>
+            <p>Pero volví.</p>
+            <p>Volví porque todavía creía en ti.</p>
+            <p>Creía en esa Yoangelis que conocí al inicio, la que no sabía matemáticas y aun así aprendía porque cuando se proponía algo, lo lograba. Creía en la mujer noble, fuerte, tierna, creyente en Dios, con un corazón que yo todavía podía ver incluso debajo de todo el dolor.</p>
+            <p>Y saliste adelante.</p>
+            <p>Eso también quiero reconocerlo.</p>
+            <p>Dejaste cosas malas. Te alejaste de personas que no te hacían bien. Empezaste a enfocarte. Trabajaste. Ahorraste. Te independizaste. Compraste tus cosas. Construiste un espacio tuyo. Volviste a demostrar que podías.</p>
+            <p>Y yo me sentí orgulloso de ti. Muy orgulloso.</p>
+            <p>Porque yo sabía lo que te había costado. Sabía tus heridas. Sabía tus luchas. Sabía lo difícil que era para ti salir de todo eso. Y aun así lo hiciste.</p>
+            <p>También hubo momentos donde sentí que Dios nos estaba dando una oportunidad.</p>
+            <p>Cuando volvimos a acercarnos, quise llevarte a la iglesia porque creía que Dios podía sanar lo que nosotros solos no podíamos. Yo le rogaba por ti. Le pedía que te diera fuerza, paz, sanidad y claridad. Le pedía que esta relación funcionara. Y si no eras para mí, también le pedía que me lo mostrara.</p>
+            <p>Pero cada vez que escuchaba al pastor hablar de luchar por el amor, cuidar la relación y no rendirse, yo sentía que esas palabras llegaban justo cuando las necesitaba. Tal vez para otros eran coincidencias. Para mí se sentían como señales.</p>
+            <p>Yo sentía que Dios nos estaba dando una oportunidad.</p>
+            <p>Y por eso luché.</p>
+            <p>Porque yo no solo te quería para un momento. Yo te soñaba para una vida.</p>
+            <p>Tu papá te cocinaba porque te amaba. Te cocinaba rico. Te cuidaba desde la comida, desde la presencia, desde ese amor puro que se levanta incluso a medianoche para preparar algo si su hija tiene hambre.</p>
+            <p>Yo no sé si cociné rico como él. Sé que nunca podría igualar su sazón. Pero lo intenté.</p>
+            <p>Y cuando te cociné a ti, sentí algo que no había sentido antes. Yo nunca había cocinado así para alguien. No con esa intención. No con ese sentimiento.</p>
+            <p>Cocinarte fue una forma de decirte que te amaba. Fue mi manera de intentar demostrarte amor puro y verdadero, como tu papá también te lo demostró desde el cuidado.</p>
+            <p>Y cuando estuve contigo y con Juana, sentí familia. Sentí que por un instante estaba viviendo algo que siempre había querido.</p>
+            <p>Soñé con llevarte el desayuno a la cama. Soñé con despertarte con algo preparado por mí. Soñé con engreírte. Soñé con cocinarte todos los días si vivíamos juntos. Soñé con prepararte lo que se te antojara y decirte: “amol, ya está listo”.</p>
+            <p>Yo nunca quise ser tu papá. Yo quería ser tu pareja.</p>
+            <p>Pero para mí una pareja también cuida. También cocina. También pregunta si comiste. También se preocupa. También acompaña. También protege. También se queda.</p>
+            <p>Yo sentí que tu papá me había dado, de alguna forma, su bendición para estar contigo. Recuerdo su sonrisa, su forma de saludarme, su manera de hablarme. Y tú misma me dijiste que él bendeciría nuestra relación.</p>
+            <p>Eso para mí significaba mucho.</p>
+            <p>Porque yo quería que él, Juana y las personas que realmente te amaron supieran que yo no llegaba a dañarte. Yo llegaba con respeto. Llegaba con amor. Llegaba para cuidarte.</p>
+            <p>Cuando me enamoré de ti, mis sueños cambiaron.</p>
+            <p>Ya no se trataba solo de lo que yo quería lograr. Empecé a soñar con verte cumplir tus sueños. Si tú eras feliz, yo también sentía que podía ser feliz.</p>
+            <p>Por eso puse en pausa muchas cosas mías. Porque quería ayudarte primero a levantar las tuyas. Pensé que después, cuando tú estuvieras mejor, también estarías conmigo para levantar las mías.</p>
+            <p>Soñé con dos hijos. Un niño y una niña. Soñé con llevarlos a hacer deporte. Soñé con elegir colegios. Soñé con un departamento contigo. Soñé con comprarnos un carro. Soñé con viajar por el mundo. Soñé con verte abrir tu salón, tú haciendo uñas hermosas y yo poniendo todo de mí en el marketing, en la publicidad y en traer clientes para que te fuera bien.</p>
+            <p>Pero también duele saber que cuando por fin empezábamos a ver luz, cuando por fin estábamos construyendo algo bonito, cuando por fin los sueños empezaban a parecer posibles, permitiste que alguien más entrara.</p>
+            <p>Y no voy a mentirte: eso me rompió.</p>
+            <p>Porque mientras yo pensaba en nuestro futuro, tú empezaste a abrirle espacio a otra persona.</p>
+            <p>Mientras yo trabajaba, me esforzaba y pensaba en cómo ayudarte a independizarte, alguien más empezó a darte una atención nueva.</p>
+            <p>Mientras yo soñaba con nuestro departamento, con nuestros hijos, con nuestro carro, con tu salón, con nuestros viajes, con una vida juntos, tú empezaste a mirar hacia otro lado.</p>
+            <p>Y quizá esa persona te hizo sentir bonita. Quizá te hizo sentir escuchada. Quizá te hizo sentir deseada. Quizá te dio esa emoción de lo nuevo que a veces se confunde con algo más grande.</p>
+            <p>Pero lo nuevo no siempre es amor, Yoangelis.</p>
+            <p>A veces lo nuevo solo es fácil porque todavía no ha cargado con nada.</p>
+            <ul>
+              <li>No ha cargado con tus noches más oscuras.</li><li>No ha cargado con tus crisis.</li><li>No ha cargado con tus heridas.</li><li>No ha cargado con tus recaídas.</li><li>No ha cargado con tus gritos.</li><li>No ha cargado con tus mentiras.</li><li>No ha cargado con la preocupación de no saber dónde estabas.</li><li>No ha cargado con el miedo de perderte de la peor manera.</li>
+            </ul>
+            <p>Yo sí.</p>
+            <p>Y aun así te amé.</p>
+            <p>Por eso fue tan injusto.</p>
+            <p>No porque yo crea que me debías quedarte conmigo por obligación. El amor no se mendiga. El amor no se obliga. Pero lo nuestro sí merecía respeto. Nuestra historia sí merecía verdad. Todo lo que vivimos sí merecía que si algo se estaba apagando, me lo dijeras antes de buscar luz en otra parte.</p>
+            <p>Yo sí intenté.</p>
+            <ul>
+              <li>Te pregunté qué pasaba.</li><li>Te pregunté si estabas bien.</li><li>Te pedí que habláramos.</li><li>Te pedí que recuperáramos la relación.</li><li>Te pedí que reviviéramos la llama.</li><li>Te pedí una acción.</li><li>Una señal.</li><li>Algo que me dijera que todavía querías luchar por nosotros.</li>
+            </ul>
+            <p>Pero muchas veces sentí que, cuando yo extendía la mano, tú mirabas hacia otro lado.</p>
+            <p>Y yo no puedo seguir peleando por una relación donde solo uno intenta salvarla.</p>
+            <p>Yo te soñé como mi familia.</p>
+            <p>Y quizás por eso duele tanto.</p>
+            <p>Porque no perdí solo a una pareja. Perdí una vida que ya estaba imaginando contigo. Perdí los desayunos que quería llevarte a la cama. Perdí las comidas que quería cocinarte. Perdí los viajes que quería hacer contigo. Perdí la casa que soñaba construir. Perdí el salón que quería ayudarte a levantar. Perdí a los hijos que imaginé. Perdí el futuro que, en mi corazón, ya tenía tu nombre.</p>
+            <p>No te escribo esto para odiarte.</p>
+            <p>No puedo odiarte.</p>
+            <p>Te quise demasiado. Te quiero todavía. Y una parte de mí probablemente siempre va a recordar con ternura a la Yoangelis que me hacía reír, que me abrazaba en la moto, que cantaba conmigo, que miraba atardeceres conmigo, que saltaba emocionada cuando me veía, que me besaba largo y me hacía sentir que todo el cansancio del mundo valía la pena.</p>
+            <p>Pero también tengo que quererme a mí.</p>
+            <p>Y quererme a mí significa aceptar que ya no puedo seguir esperando que valores mi amor después de romperlo tantas veces.</p>
+            <p>Yo fui leal.</p>
+            <p>Con mis errores, con mis heridas, con mis deudas, con mis miedos, con mis momentos difíciles, fui leal.</p>
+            <ul>
+              <li>Te di lo que tenía.</li><li>Y cuando no tenía, buscaba cómo darte.</li><li>Te amé en tus mejores días.</li><li>Y también en los peores.</li><li>Te cuidé cuando otros se habrían ido.</li><li>Te elegí cuando tú misma no sabías elegirme.</li><li>Te ayudé a levantar una versión de ti que hoy otros pueden mirar sin saber todo lo que costó.</li>
+            </ul>
+            <p>Pero ahora me toca elegirme a mí.</p>
+            <p>Ojalá algún día entiendas que no perdiste a un hombre perfecto. Yo no lo fui.</p>
+            <p>Pero sí perdiste a un hombre que te amó de verdad.</p>
+            <ul>
+              <li>A un hombre que quiso cuidarte sin reemplazar a nadie.</li><li>A un hombre que quiso darte un amor limpio.</li><li>A un hombre que creyó en ti incluso cuando tú estabas perdida.</li><li>A un hombre que soñó contigo una familia, una casa, un futuro y una vida.</li><li>A un hombre que intentó hasta el último momento.</li>
+            </ul>
+            <p>Y si algún día lo recuerdas, no quiero que lo recuerdes solo con culpa.</p>
+            <p>Quiero que lo recuerdes con verdad.</p>
+            <p>Porque yo sí estuve. Yo sí luché. Yo sí te amé. Yo sí quise quedarme.</p>
+            <p>Pero esta vez, mi última forma de amarte será irme.</p>
+            <p>Que Dios te cuide. Que Dios sane lo que yo no pude sanar. Que Dios te ayude a convertirte en la mujer que yo siempre creí que podías ser.</p>
+            <p><strong>Adiós, amol.</strong></p>
+            <p><strong>Yo te amé.</strong></p>
+            <p><strong>Ahora me elijo.</strong></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="cierre" class="section ending full-screen">
+        <article class="ending-card reveal">
+          <p>Algunas personas no se van porque dejaron de amar.</p>
+          <h2>Se van porque quedarse también empezó a romperlas.</h2>
+          <div class="ending-actions">
+            <button class="secondary" data-jump="inicio">Volver a los recuerdos</button>
+            <button id="closeStory" class="primary" type="button">Cerrar esta historia</button>
+          </div>
+          <p id="finalMessage" class="final-message" hidden>Yo te amé.<br />Ahora me elijo.</p>
+        </article>
+      </section>
+    </main>
+
+    <dialog id="photoModal" class="photo-modal">
+      <button id="modalClose" type="button" aria-label="Cerrar foto">×</button>
+      <img id="modalImage" alt="" />
+      <p id="modalCaption"></p>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
